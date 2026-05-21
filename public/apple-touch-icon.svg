@@ -1,0 +1,13 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" rx="42" fill="#17110C"/>
+  <circle cx="90" cy="90" r="64" fill="url(#gold)" stroke="#FFF7EA" stroke-opacity="0.68" stroke-width="4"/>
+  <text x="90" y="109" text-anchor="middle" fill="#17110C" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800">D</text>
+  <text x="90" y="134" text-anchor="middle" fill="#17110C" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2">DSCENT.NG</text>
+  <defs>
+    <linearGradient id="gold" x1="43" y1="28" x2="140" y2="151" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4C7"/>
+      <stop offset="0.5" stop-color="#C8994D"/>
+      <stop offset="1" stop-color="#F8DD9D"/>
+    </linearGradient>
+  </defs>
+</svg>

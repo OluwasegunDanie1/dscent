@@ -1,0 +1,20 @@
+{
+  "name": "DSCENT.NG",
+  "short_name": "DSCENT.NG",
+  "description": "Smell Fresh. Look Better.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#17110C",
+  "background_color": "#FFF7EA",
+  "display": "standalone"
+}
