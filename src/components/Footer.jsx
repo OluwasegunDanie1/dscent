@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-contact" aria-label="DSCENT.NG contact details">
-        <a href="https://www.instagram.com/Dscent.ng" target="_blank" rel="noreferrer">
+        <a href="https://www.instagram.com/dscent.ng/" target="_blank" rel="noopener noreferrer">
           <InstagramGlyph />
           @Dscent.ng
         </a>
