@@ -10,7 +10,7 @@
   border: 1px solid rgba(214, 51, 132, 0.34);
   border-radius: 16px;
   background: rgba(26, 26, 46, 0.94);
-  box-shadow: 0 18px 44px rgba(26, 26, 46, 0.2);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08);
   color: #fff5f9;
   font-size: 0.9rem;
   font-weight: 900;
@@ -124,7 +124,7 @@ strong {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: #e91e63;
+  background: #d63384;
   content: '';
   transform: scaleX(0);
   transform-origin: right;
@@ -166,7 +166,7 @@ strong {
 .cart-link:hover,
 .cart-link.active {
   border-color: rgba(214, 51, 132, 0.54);
-  box-shadow: 0 14px 30px rgba(26, 26, 46, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   transform: translateY(-2px);
 }
 
@@ -195,7 +195,7 @@ strong {
   height: 42px;
   border: 1px solid rgba(214, 51, 132, 0.28);
   border-radius: 999px;
-  background: rgba(255, 245, 249, 0.74);
+  background: #ffffff;
   color: #1a1a2e;
   transition:
     border-color 180ms ease,
@@ -205,7 +205,7 @@ strong {
 
 .icon-button:hover {
   border-color: rgba(214, 51, 132, 0.54);
-  box-shadow: 0 14px 30px rgba(26, 26, 46, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   transform: translateY(-2px);
 }
 
@@ -243,15 +243,15 @@ strong {
   gap: 0.7rem;
   border: 1px solid rgba(214, 51, 132, 0.35);
   border-radius: 999px;
-  background: rgba(255, 245, 249, 0.74);
+  background: rgba(255, 255, 255, 0.75);
   padding: 0.55rem 0.8rem;
-  box-shadow: 0 12px 36px rgba(26, 26, 46, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 .hero-badge::before {
   width: 28px;
   height: 1px;
-  background: #e91e63;
+  background: #d63384;
   content: '';
 }
 
@@ -338,7 +338,7 @@ h3 {
 }
 
 .button:hover {
-  box-shadow: 0 16px 34px rgba(26, 26, 46, 0.18);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transform: translateY(-3px);
 }
 
@@ -348,15 +348,15 @@ h3 {
 }
 
 .button.secondary {
-  border-color: rgba(214, 51, 132, 0.36);
-  background: rgba(255, 245, 249, 0.78);
-  color: #1a1a2e;
+  border: 1.5px solid #7D1C3C;
+  background: #ffffff;
+  color: #7D1C3C;
 }
 
 .button.ghost {
-  border-color: rgba(214, 51, 132, 0.22);
+  border: 1.5px solid rgba(214, 51, 132, 0.25);
   background: transparent;
-  color: #6b5b7b;
+  color: #d63384;
 }
 
 .hero-visual-wrap {
@@ -371,7 +371,7 @@ h3 {
   border-radius: 50%;
   background:
     radial-gradient(circle, rgba(214, 51, 132, 0.28), transparent 60%),
-    radial-gradient(circle at 68% 38%, rgba(233, 30, 99, 0.5), transparent 58%);
+    radial-gradient(circle at 68% 38%, rgba(214, 51, 132, 0.5), transparent 58%);
   filter: blur(28px);
   content: '';
 }
@@ -389,7 +389,7 @@ h3 {
   background-position: center;
   background-size: cover;
   box-shadow:
-    0 34px 90px rgba(26, 26, 46, 0.2),
+    0 24px 60px rgba(0, 0, 0, 0.08),
     inset 0 0 0 1px rgba(255, 255, 255, 0.24);
 }
 
@@ -418,11 +418,11 @@ h3 {
   display: grid;
   gap: 0.2rem;
   min-width: 190px;
-  border: 1px solid rgba(214, 51, 132, 0.22);
+  border: 1px solid rgba(214, 51, 132, 0.15);
   border-radius: 18px;
-  background: rgba(255, 245, 249, 0.88);
+  background: rgba(255, 255, 255, 0.9);
   padding: 1rem;
-  box-shadow: 0 18px 50px rgba(26, 26, 46, 0.16);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(14px);
 }
 
@@ -443,7 +443,7 @@ h3 {
 .page-section {
   width: min(1180px, calc(100% - 36px));
   margin: 0 auto;
-  padding: 5rem 0;
+  padding: 6rem 0;
 }
 
 .page-fill {
@@ -462,7 +462,7 @@ h3 {
   display: grid;
   gap: 0.25rem;
   max-width: 760px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.75rem;
 }
 
 .text-link {
@@ -471,6 +471,13 @@ h3 {
   color: #d63384;
   font-weight: 800;
   text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms ease;
+}
+
+.text-link:hover {
+  border-bottom-color: #d63384;
 }
 
 .product-grid,
@@ -492,10 +499,10 @@ h3 {
 .quiz-card,
 .admin-card,
 .admin-form {
-  border: 1px solid rgba(214, 51, 132, 0.18);
+  border: 1px solid rgba(214, 51, 132, 0.1);
   border-radius: 18px;
-  background: rgba(255, 245, 249, 0.74);
-  box-shadow: 0 18px 50px rgba(26, 26, 46, 0.09);
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .product-card {
@@ -505,7 +512,14 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   overflow: hidden;
-  padding: 0.9rem;
+  padding: 1.1rem;
+  transition: box-shadow 250ms ease, transform 250ms ease, border-color 250ms ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(214, 51, 132, 0.2);
 }
 
 .product-card-link {
@@ -531,26 +545,32 @@ h3 {
   gap: 0.45rem;
   width: 100%;
   min-height: 42px;
-  border: 1px solid rgba(214, 51, 132, 0.28);
+  border: 1.5px solid #7D1C3C;
   border-radius: 999px;
-  background: #1a1a2e;
-  color: #fff5f9;
+  background: #7D1C3C;
+  color: #ffffff;
   font-weight: 900;
   cursor: pointer;
   transition:
+    background 190ms ease,
     box-shadow 190ms ease,
     transform 190ms ease,
     border-color 190ms ease;
 }
 
 .product-add-button svg {
-  color: #f8b4d0;
+  color: #ffffff;
 }
 
 .product-add-button:hover {
-  border-color: rgba(248, 180, 208, 0.7);
-  box-shadow: 0 16px 34px rgba(26, 26, 46, 0.18);
+  background: #63142e;
+  border-color: #63142e;
+  box-shadow: 0 8px 20px rgba(125, 28, 60, 0.25);
   transform: translateY(-2px);
+}
+
+.product-add-button:hover svg {
+  color: #ffffff;
 }
 
 .product-whatsapp-button {
@@ -560,10 +580,10 @@ h3 {
   gap: 0.45rem;
   width: 100%;
   min-height: 42px;
-  border: 1px solid rgba(214, 51, 132, 0.28);
+  border: 1.5px solid #7D1C3C;
   border-radius: 999px;
-  background: rgba(255, 245, 249, 0.82);
-  color: #1a1a2e;
+  background: #7D1C3C;
+  color: #ffffff;
   font-weight: 900;
   line-height: 1.2;
   padding: 0.55rem 0.75rem;
@@ -572,16 +592,18 @@ h3 {
   transition:
     box-shadow 190ms ease,
     transform 190ms ease,
+    background 190ms ease,
     border-color 190ms ease;
 }
 
 .product-whatsapp-button svg {
-  color: #d63384;
+  color: #ffffff;
 }
 
 .product-whatsapp-button:hover {
-  border-color: rgba(214, 51, 132, 0.56);
-  box-shadow: 0 14px 30px rgba(26, 26, 46, 0.12);
+  background: #63142e;
+  border-color: #63142e;
+  box-shadow: 0 8px 20px rgba(125, 28, 60, 0.25);
   transform: translateY(-2px);
 }
 
@@ -593,11 +615,9 @@ h3 {
   height: 190px;
   min-height: 190px;
   overflow: hidden;
-  border: 1px solid rgba(214, 51, 132, 0.14);
+  border: 1px solid rgba(214, 51, 132, 0.08);
   border-radius: 16px;
-  background:
-    radial-gradient(circle at 50% 15%, rgba(248, 180, 208, 0.22), transparent 46%),
-    rgba(255, 245, 249, 0.86);
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .product-image img {
@@ -610,14 +630,14 @@ h3 {
   position: absolute;
   top: 0.65rem;
   left: 0.65rem;
-  border: 1px solid rgba(248, 180, 208, 0.5);
+  border: 1px solid rgba(125, 28, 60, 0.25);
   border-radius: 999px;
-  background: rgba(26, 26, 46, 0.88);
-  color: #f8b4d0;
-  font-size: 0.68rem;
+  background: #7D1C3C;
+  color: #ffffff;
+  font-size: 0.65rem;
   font-weight: 900;
   letter-spacing: 0.08em;
-  padding: 0.32rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   text-transform: uppercase;
 }
 
@@ -631,9 +651,9 @@ h3 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #fff5f9;
+  background: #ffffff;
   color: #d63384;
-  box-shadow: 0 12px 30px rgba(26, 26, 46, 0.14);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   transition: transform 220ms ease;
 }
 
@@ -644,10 +664,11 @@ h3 {
 .product-mood {
   margin: 1.2rem 0 0.35rem;
   color: #d63384;
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  opacity: 0.7;
 }
 
 .product-card h3 {
@@ -687,7 +708,7 @@ h3 {
   top: 0;
   left: 0;
   overflow: hidden;
-  color: #e91e63;
+  color: #d63384;
   white-space: nowrap;
 }
 
@@ -714,7 +735,7 @@ h3 {
 
 .product-price-row strong {
   color: #1a1a2e;
-  font-size: 1.02rem;
+  font-size: 1.15rem;
   font-weight: 950;
   white-space: nowrap;
 }
@@ -728,10 +749,10 @@ h3 {
 }
 
 .discount-badge {
-  border: 1px solid rgba(214, 51, 132, 0.24);
+  border: 0;
   border-radius: 999px;
-  background: rgba(248, 180, 208, 0.2);
-  color: #8e2626;
+  background: #FFE8EF;
+  color: #7D1C3C;
   font-size: 0.7rem;
   font-weight: 950;
   padding: 0.14rem 0.34rem;
@@ -753,10 +774,10 @@ h3 {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1.4rem;
-  border: 1px solid rgba(214, 51, 132, 0.18);
+  border: 1px solid rgba(214, 51, 132, 0.1);
   border-radius: 18px;
-  background: rgba(255, 245, 249, 0.76);
-  box-shadow: 0 18px 50px rgba(26, 26, 46, 0.08);
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   padding: 1rem;
 }
 
@@ -804,7 +825,7 @@ h3 {
   background:
     linear-gradient(45deg, transparent 50%, #d63384 50%),
     linear-gradient(135deg, #d63384 50%, transparent 50%),
-    rgba(255, 245, 249, 0.9);
+    rgba(255, 255, 255, 0.9);
   background-position:
     calc(100% - 18px) 50%,
     calc(100% - 12px) 50%;
@@ -845,10 +866,8 @@ h3 {
   overflow: hidden;
   border: 1px solid rgba(214, 51, 132, 0.22);
   border-radius: 28px;
-  background:
-    radial-gradient(circle at 50% 20%, rgba(248, 180, 208, 0.22), transparent 44%),
-    rgba(255, 245, 249, 0.92);
-  box-shadow: 0 34px 90px rgba(26, 26, 46, 0.14);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
 }
 
 .product-detail-image-section {
@@ -994,13 +1013,14 @@ h3 {
 }
 
 .detail-grid span {
-  border: 1px solid rgba(214, 51, 132, 0.22);
+  border: 1px solid rgba(214, 51, 132, 0.2);
   border-radius: 999px;
-  background: rgba(255, 245, 249, 0.78);
-  color: #4a3f5c;
-  font-size: 0.82rem;
-  font-weight: 800;
-  padding: 0.52rem 0.7rem;
+  background: #ffffff;
+  color: #d63384;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.42rem 0.7rem;
+  opacity: 0.85;
 }
 
 .product-detail-actions {
@@ -1031,16 +1051,16 @@ h3 {
   gap: 0.65rem;
   max-width: 760px;
   margin: 1rem auto 0;
-  border: 1px solid rgba(214, 51, 132, 0.18);
+  border: 1px solid rgba(214, 51, 132, 0.1);
   border-radius: 18px;
-  background: rgba(255, 245, 249, 0.76);
-  box-shadow: 0 18px 50px rgba(26, 26, 46, 0.08);
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   padding: 1.2rem;
 }
 
 .product-description-card p {
   margin: 0;
-  color: #6b5b7b;
+  color: #333333;
   line-height: 1.75;
 }
 
@@ -1064,10 +1084,10 @@ h3 {
 .cart-item,
 .cart-summary,
 .cart-empty {
-  border: 1px solid rgba(214, 51, 132, 0.18);
+  border: 1px solid rgba(214, 51, 132, 0.1);
   border-radius: 18px;
-  background: rgba(255, 245, 249, 0.74);
-  box-shadow: 0 18px 50px rgba(26, 26, 46, 0.09);
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .cart-item {
@@ -1076,7 +1096,7 @@ h3 {
   align-items: center;
   gap: 1rem;
   min-width: 0;
-  padding: 0.9rem;
+  padding: 1.1rem;
 }
 
 .cart-item-image {
@@ -1085,11 +1105,9 @@ h3 {
   width: 104px;
   aspect-ratio: 1;
   overflow: hidden;
-  border: 1px solid rgba(214, 51, 132, 0.16);
+  border: 1px solid rgba(214, 51, 132, 0.1);
   border-radius: 16px;
-  background:
-    radial-gradient(circle at 50% 20%, rgba(248, 180, 208, 0.24), transparent 44%),
-    rgba(255, 245, 249, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   color: #d63384;
 }
 
@@ -1140,7 +1158,7 @@ h3 {
   overflow: hidden;
   border: 1px solid rgba(214, 51, 132, 0.24);
   border-radius: 999px;
-  background: rgba(255, 245, 249, 0.9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .quantity-controls button {
@@ -1263,10 +1281,10 @@ h3 {
 
 .about-story,
 .about-cta {
-  border: 1px solid rgba(214, 51, 132, 0.18);
+  border: 1px solid rgba(214, 51, 132, 0.1);
   border-radius: 22px;
-  background: rgba(255, 245, 249, 0.74);
-  box-shadow: 0 18px 50px rgba(26, 26, 46, 0.09);
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .about-story {
@@ -1311,20 +1329,20 @@ h3 {
   align-content: start;
   gap: 0.7rem;
   min-height: 150px;
-  border: 1px solid rgba(214, 51, 132, 0.18);
+  border: 1px solid rgba(214, 51, 132, 0.1);
   border-radius: 18px;
-  background: rgba(255, 245, 249, 0.74);
-  box-shadow: 0 18px 50px rgba(26, 26, 46, 0.08);
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   padding: 1.1rem;
   transition:
-    box-shadow 190ms ease,
-    transform 190ms ease,
-    border-color 190ms ease;
+    box-shadow 250ms ease,
+    transform 250ms ease,
+    border-color 250ms ease;
 }
 
 .about-card:hover {
-  border-color: rgba(214, 51, 132, 0.4);
-  box-shadow: 0 20px 54px rgba(26, 26, 46, 0.12);
+  border-color: rgba(214, 51, 132, 0.25);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
   transform: translateY(-3px);
 }
 
@@ -1362,10 +1380,11 @@ h3 {
   gap: 0.75rem;
   max-width: 540px;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(214, 51, 132, 0.28);
+  border: 1px solid rgba(214, 51, 132, 0.2);
   border-radius: 999px;
-  background: rgba(255, 245, 249, 0.78);
+  background: #ffffff;
   padding: 0 1rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
 }
 
 .search-bar input {
@@ -1387,7 +1406,7 @@ h3 {
 .quiz-card,
 .admin-card,
 .admin-form {
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
 .quiz-card h2,
@@ -1447,7 +1466,7 @@ h3 {
 .quiz-progress-fill {
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #1a1a2e, #e91e63);
+  background: linear-gradient(90deg, #1a1a2e, #d63384);
   transition: width 240ms ease;
 }
 
@@ -1495,7 +1514,7 @@ h3 {
 .quiz-options button.selected {
   border-color: rgba(214, 51, 132, 0.58);
   background: rgba(248, 180, 208, 0.22);
-  box-shadow: 0 14px 30px rgba(26, 26, 46, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   transform: translateY(-2px);
 }
 
@@ -1556,10 +1575,10 @@ h3 {
 .stat-card,
 .empty-state,
 .admin-product-card {
-  border: 1px solid rgba(214, 51, 132, 0.18);
+  border: 1px solid rgba(214, 51, 132, 0.1);
   border-radius: 18px;
-  background: rgba(255, 245, 249, 0.74);
-  box-shadow: 0 18px 50px rgba(26, 26, 46, 0.09);
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .stat-card {
@@ -1622,10 +1641,8 @@ h3 {
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 14px;
-  background:
-    radial-gradient(circle at 70% 20%, rgba(248, 180, 208, 0.32), transparent 42%),
-    rgba(255, 245, 249, 0.82);
-  color: #f8b4d0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #d63384;
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
 }
@@ -1671,11 +1688,12 @@ h3 {
 .admin-product-meta span {
   border: 1px solid rgba(214, 51, 132, 0.2);
   border-radius: 999px;
-  background: rgba(255, 245, 249, 0.78);
-  color: #4a3f5c;
-  font-size: 0.82rem;
-  font-weight: 800;
+  background: #ffffff;
+  color: #d63384;
+  font-size: 0.75rem;
+  font-weight: 700;
   padding: 0.4rem 0.6rem;
+  opacity: 0.85;
 }
 
 .admin-product-actions {
@@ -1711,7 +1729,7 @@ h3 {
   width: 100%;
   border: 1px solid rgba(214, 51, 132, 0.26);
   border-radius: 12px;
-  background: rgba(255, 245, 249, 0.82);
+  background: #ffffff;
   color: #1a1a2e;
   padding: 0.8rem 0.9rem;
 }
@@ -1748,7 +1766,7 @@ h3 {
   gap: 1rem;
   border: 1px solid rgba(214, 51, 132, 0.16);
   border-radius: 16px;
-  background: rgba(255, 245, 249, 0.55);
+  background: rgba(255, 255, 255, 0.7);
   padding: 1rem;
 }
 
@@ -1769,9 +1787,7 @@ h3 {
   overflow: hidden;
   border: 1px dashed rgba(214, 51, 132, 0.38);
   border-radius: 18px;
-  background:
-    radial-gradient(circle at 50% 20%, rgba(248, 180, 208, 0.22), transparent 44%),
-    rgba(255, 245, 249, 0.92);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .image-upload-preview img {
@@ -1898,9 +1914,9 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  border: 1px solid rgba(214, 51, 132, 0.28);
+  border: 1px solid rgba(214, 51, 132, 0.2);
   border-radius: 14px;
-  background: rgba(255, 245, 249, 0.76);
+  background: #ffffff;
   color: #1a1a2e;
   min-height: 36px;
   padding: 0.46rem 0.68rem;
@@ -1931,23 +1947,24 @@ h3 {
 }
 
 .footer-contact a:hover svg {
-  color: #e91e63;
+  color: #d63384;
   transform: scale(1.08);
 }
 
 .footer-contact .whatsapp-button {
-  border-color: rgba(214, 51, 132, 0.42);
-  background: linear-gradient(135deg, #1a1a2e, #2d1b4e);
-  color: #fff5f9;
+  border: 1.5px solid #7D1C3C;
+  background: #7D1C3C;
+  color: #ffffff;
 }
 
 .footer-contact .whatsapp-button svg {
-  color: #f8b4d0;
+  color: #ffffff;
 }
 
 .footer-contact .whatsapp-button:hover {
-  border-color: rgba(248, 180, 208, 0.7);
-  box-shadow: 0 18px 38px rgba(26, 26, 46, 0.2);
+  background: #63142e;
+  border-color: #63142e;
+  box-shadow: 0 8px 20px rgba(125, 28, 60, 0.25);
 }
 
 @media (min-width: 901px) {
@@ -1974,8 +1991,8 @@ h3 {
     width: 100%;
     border: 1px solid rgba(214, 51, 132, 0.26);
     border-radius: 20px;
-    background: rgba(255, 245, 249, 0.94);
-    box-shadow: 0 24px 60px rgba(26, 26, 46, 0.14);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
     padding: 0.7rem;
     backdrop-filter: blur(18px);
   }
@@ -2160,8 +2177,8 @@ h3 {
     width: 100%;
     border: 1px solid rgba(214, 51, 132, 0.26);
     border-radius: 18px;
-    background: rgba(255, 245, 249, 0.96);
-    box-shadow: 0 22px 52px rgba(26, 26, 46, 0.16);
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 22px 52px rgba(0, 0, 0, 0.1);
     padding: 0.65rem;
     backdrop-filter: blur(18px);
   }

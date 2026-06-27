@@ -1,6 +1,6 @@
 :root {
   color: #1a1a2e;
-  background: #fff5f9;
+  background: #FFFAFA;
   font-family: 'Inter', 'Playfair Display', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     sans-serif;
   font-synthesis: none;
@@ -30,9 +30,9 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 14% 8%, rgba(214, 51, 132, 0.08), transparent 25rem),
-    radial-gradient(circle at 92% 18%, rgba(233, 30, 99, 0.06), transparent 22rem),
-    linear-gradient(135deg, #ffffff 0%, #fff5f9 52%, #fef4f8 100%);
+    radial-gradient(circle at 14% 8%, rgba(214, 51, 132, 0.04), transparent 25rem),
+    radial-gradient(circle at 92% 18%, rgba(233, 30, 99, 0.03), transparent 22rem),
+    linear-gradient(135deg, #ffffff 0%, #FFFAFA 52%, #FFF5F5 100%);
 }
 
 button,
