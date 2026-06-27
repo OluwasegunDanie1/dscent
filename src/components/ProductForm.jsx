@@ -12,6 +12,7 @@ const emptyProduct = {
   occasion: '',
   description: '',
   imageUrl: '',
+  images: [],
   topPick: false,
   inStock: true,
   rating: 5,
@@ -64,10 +65,11 @@ export default function ProductForm({
     })
   }
 
-  function updateImageUrl(imageUrl) {
+  function updateImages(images) {
     onChange({
       ...formData,
-      imageUrl,
+      images,
+      imageUrl: images[0] || '',
     })
   }
 
@@ -182,7 +184,7 @@ export default function ProductForm({
 
       <div className="form-section">
         <h2>Image & Description</h2>
-        <ImageUploadButton imageUrl={formData.imageUrl} onImageChange={updateImageUrl} />
+        <ImageUploadButton images={formData.images || []} onImagesChange={updateImages} />
         <label>
           Description
           <textarea

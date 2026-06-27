@@ -25,6 +25,7 @@ const productFields = [
   'occasion',
   'description',
   'imageUrl',
+  'images',
   'topPick',
   'inStock',
   'rating',
@@ -53,6 +54,10 @@ function normalizeProductData(productData) {
 
   if ('reviewCount' in normalized) {
     normalized.reviewCount = Number(normalized.reviewCount) || 0
+  }
+
+  if ('images' in normalized) {
+    normalized.images = Array.isArray(normalized.images) ? normalized.images : [normalized.images].filter(Boolean)
   }
 
   return normalized

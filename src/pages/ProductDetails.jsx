@@ -14,6 +14,7 @@ export default function ProductDetails() {
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
 
   useEffect(() => {
     let isMounted = true
@@ -72,6 +73,23 @@ export default function ProductDetails() {
 
   const { handleAddToCart, wasAdded } = useAddToCartFeedback(product || {})
 
+  const productImages = product
+    ? product.images?.length
+      ? product.images
+      : product.imageUrl
+        ? [product.imageUrl]
+        : []
+    : []
+
+  function getActiveImage() {
+    return productImages[activeImageIndex] || product.imageUrl || null
+  }
+
+  // Reset active index when product changes
+  useEffect(() => {
+    setActiveImageIndex(0)
+  }, [id])
+
   if (loading) {
     return (
       <section className="page-section page-fill product-detail-page">
@@ -104,9 +122,25 @@ export default function ProductDetails() {
         <span>{product.name}</span>
       </nav>
       <div className="product-detail">
-        <div className="product-detail-image">
-          {product.imageUrl ? <img alt={product.name} src={product.imageUrl} /> : <Sparkles size={42} />}
-          {product.topPick && <span className="top-pick-badge">Top Pick</span>}
+        <div className="product-detail-image-section">
+          <div className="product-detail-image">
+            {getActiveImage() ? <img alt={product.name} src={getActiveImage()} /> : <Sparkles size={42} />}
+            {product.topPick && <span className="top-pick-badge">Top Pick</span>}
+          </div>
+          {productImages.length > 1 && (
+            <div className="product-thumbnail-strip">
+              {productImages.map((url, index) => (
+                <button
+                  className={`product-thumbnail ${index === activeImageIndex ? 'active' : ''}`}
+                  key={index}
+                  type="button"
+                  onClick={() => setActiveImageIndex(index)}
+                >
+                  <img alt={`${product.name} thumbnail ${index + 1}`} src={url} />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
         <div className="product-detail-copy">
           <span className="eyebrow">{product.category || 'DSCENT.NG fragrance'}</span>

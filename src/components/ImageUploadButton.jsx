@@ -1,11 +1,13 @@
-import { useState } from 'react'
-import { ImagePlus, RefreshCw } from 'lucide-react'
+import { useRef, useState } from 'react'
+import { ImagePlus, RefreshCw, X } from 'lucide-react'
 import { getCloudinaryConfig, loadCloudinaryWidget } from '../services/cloudinary.js'
 
-export default function ImageUploadButton({ imageUrl, onImageChange }) {
+export default function ImageUploadButton({ images = [], onImagesChange }) {
   const [error, setError] = useState('')
   const [showFallbackInput, setShowFallbackInput] = useState(false)
   const [isOpening, setIsOpening] = useState(false)
+  const imagesRef = useRef(images)
+  imagesRef.current = images
 
   async function openWidget() {
     setError('')
@@ -29,7 +31,7 @@ export default function ImageUploadButton({ imageUrl, onImageChange }) {
           cloudName,
           uploadPreset,
           cropping: false,
-          multiple: false,
+          multiple: true,
           sources: ['local', 'camera', 'url'],
           resourceType: 'image',
           showAdvancedOptions: false,
@@ -59,7 +61,7 @@ export default function ImageUploadButton({ imageUrl, onImageChange }) {
           }
 
           if (result.event === 'success') {
-            onImageChange(result.info.secure_url)
+            onImagesChange([...imagesRef.current, result.info.secure_url])
             setShowFallbackInput(false)
             setError('')
           }
@@ -75,27 +77,51 @@ export default function ImageUploadButton({ imageUrl, onImageChange }) {
     }
   }
 
+  function removeImage(indexToRemove) {
+    onImagesChange(images.filter((_, index) => index !== indexToRemove))
+  }
+
+  function addFallbackUrl(url) {
+    if (url.trim()) {
+      onImagesChange([...images, url.trim()])
+    }
+  }
+
   return (
     <div className="image-upload">
       <div className="image-upload-preview">
-        {imageUrl ? (
-          <img alt="Product preview" src={imageUrl} />
+        {images.length > 0 ? (
+          <div className="image-upload-gallery">
+            {images.map((url, index) => (
+              <div className="image-upload-gallery-item" key={index}>
+                <img alt={`Product image ${index + 1}`} src={url} />
+                <button
+                  className="image-upload-remove"
+                  type="button"
+                  onClick={() => removeImage(index)}
+                  title="Remove image"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            ))}
+          </div>
         ) : (
           <div>
             <ImagePlus size={28} />
-            <span>No image uploaded</span>
+            <span>No images uploaded</span>
           </div>
         )}
       </div>
 
       <div className="image-upload-actions">
         <button className="button secondary" disabled={isOpening} type="button" onClick={openWidget}>
-          {imageUrl ? <RefreshCw size={18} /> : <ImagePlus size={18} />}
-          {isOpening ? 'Opening...' : imageUrl ? 'Change Image' : 'Upload Product Image'}
+          <ImagePlus size={18} />
+          {isOpening ? 'Opening...' : images.length > 0 ? 'Add More Images' : 'Upload Product Images'}
         </button>
-        {imageUrl && (
-          <button className="button ghost" type="button" onClick={() => onImageChange('')}>
-            Remove
+        {images.length > 0 && (
+          <button className="button ghost" type="button" onClick={() => onImagesChange([])}>
+            Remove All
           </button>
         )}
       </div>
@@ -104,12 +130,13 @@ export default function ImageUploadButton({ imageUrl, onImageChange }) {
       {showFallbackInput && (
         <label>
           Image URL
-          <input
-            name="imageUrl"
-            onChange={(event) => onImageChange(event.target.value)}
-            placeholder="Paste image URL"
-            value={imageUrl ?? ''}
-          />
+          <div className="image-url-row">
+            <input
+              name="imageUrl"
+              onChange={(event) => addFallbackUrl(event.target.value)}
+              placeholder="Paste image URL and press Enter"
+            />
+          </div>
         </label>
       )}
     </div>

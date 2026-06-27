@@ -39,6 +39,7 @@ export default function EditProduct() {
           reviewCount: Number(product.reviewCount) || 0,
           topPick: Boolean(product.topPick),
           inStock: product.inStock ?? true,
+          images: product.images || (product.imageUrl ? [product.imageUrl] : []),
         })
       } catch (err) {
         if (isMounted) {
