@@ -23,7 +23,7 @@ const selectFields = [
   {
     name: 'category',
     label: 'Category',
-    options: ['Perfume Oil', 'Body Spray', 'Designer Perfume', 'Unisex Perfume', 'Gift Set', 'Ordinary Perfume', 'Combo Package', 'Roll On'],
+    options: ['Perfume Oil', 'Body Spray', 'Designer Perfume', 'Unisex Perfume', 'Gift Set', 'Perfume', 'Combo Package', 'Roll On'],
   },
   {
     name: 'gender',
