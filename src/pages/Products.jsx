@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard.jsx'
 import { getProducts } from '../services/productService.js'
 
 const filterOptions = {
-  category: ['Perfume Oil', 'Body Spray', 'Designer Perfume', 'Unisex Perfume', 'Gift Set'],
+  category: ['Perfume Oil', 'Body Spray', 'Designer Perfume', 'Unisex Perfume', 'Gift Set', 'Ordinary Perfume', 'Combo Package', 'Roll On'],
   gender: ['Male', 'Female', 'Unisex'],
   scentType: ['Sweet', 'Fresh', 'Floral', 'Woody', 'Spicy', 'Oud', 'Citrus', 'Vanilla'],
   inStock: ['In Stock', 'Out of Stock'],
